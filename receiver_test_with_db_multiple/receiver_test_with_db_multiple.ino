@@ -124,7 +124,7 @@ void loop() {
     }
     new_vals = false;
   }
-  delay(1000);
+  delay(10);
 }
 
 void onDataReceived(const esp_now_recv_info_t* recv_info, const uint8_t *incomingData, int len) {
