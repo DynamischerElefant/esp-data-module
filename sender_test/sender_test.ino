@@ -1,5 +1,8 @@
 #include <esp_now.h>
 #include <WiFi.h>
+#include <esp_wifi.h>
+
+#define WIFI_CHANNEL 1
 
 // === STRUCT DEFINITION ===
 #define MAX_MEASUREMENTS 10
@@ -23,6 +26,8 @@ void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
+
+  esp_wifi_set_channel(WIFI_CHANNEL, WIFI_SECOND_CHAN_NONE);
 
   if (esp_now_init() != ESP_OK) {
     Serial.println("Error initializing ESP-NOW");
