@@ -14,6 +14,9 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - communication via ESPNOW
 - public broadcasting as default (no complicated setup required)
 - data is transmitted as struct: Default is float data, but the struct can easily be changed
+- considerations for the struct:
+    - sending names together with measurements -> easier to sync/distinguish/upload to db
+    - sending to db: send everytime there are new values, sending everything (high storage) OR cache and send
 
 
 ## Data Collection Module and Forwarding/Upload (2 -> 3)
