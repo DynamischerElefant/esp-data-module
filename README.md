@@ -14,16 +14,13 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - communication via ESPNOW
 - public broadcasting as default (no complicated setup required)
 - data is transmitted as struct: Default is float data, but the struct can easily be changed
-- considerations for the struct:
-    - sending names together with measurements -> easier to sync/distinguish/upload to db
-    - sending to db: send everytime there are new values, sending everything (high storage) OR cache and send
-
+- the struct contains the measurements and their lables
 
 ## Data Collection Module and Forwarding/Upload (2 -> 3)
 - different options for data collection/forwarding
-    - strict forwarding of data
+    - strict forwarding of data (default)
         - fields are sent when they arrive at the module, even if not all fields have new measurements
-        - usually works well with Influx/Grafana, but could pose problems when using SQL for querying
+        - some values sent will not be fresh, so there will be duplicates (but no empty slots) in the database
         - -> easiest option if simple visualisation is the goal
     - caching until all fields are filled
         - module caches all fields, until every field has received a new value
