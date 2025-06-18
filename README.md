@@ -14,7 +14,7 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - communication via ESPNOW
 - public broadcasting as default (no complicated setup required)
 - data is transmitted as struct: Default is float data, but the struct can easily be changed
-- the struct contains the measurements and their lables
+- the struct contains the measurements and their lables, Caution: every measurement label (name) can be used **only once**
 - ESPNOW in combination with WiFi functionality makes receiver unreliable (potential fix: BLE?)
 
 ## Data Collection Module and Forwarding/Upload (2 -> 3)
