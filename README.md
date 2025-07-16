@@ -35,3 +35,19 @@ This three-level system allows for easy optimization where it is needed. Some ex
 
 ## Server-side
 - lorem ipsum
+
+
+## Setup
+### Sender (sensor-side)
+- in your sensor-esp, insert the code from sender_test.ino somewhere in your sender code
+- sender_test.ino is an example for sending data, after inserting the code, you only have to change a few things
+    - set dataLabels to whatever your measurements are called (max 4 letters)
+    - make sure to delete the default values and to dynamically set the values using data[i] = measurement for every measurement
+
+### Receiver (data-esp)
+- setup an esp with the receiver_test_with_db_multiple.ino code
+- things to change in the code
+    - change the wifi-credentials to those of your wifi (WIFI_SSID, WIFI_PASSWORD)
+    - setup your Influx connection (INFLUXDB_URL, INFLUXDB_TOKEN, INFLUXDB_ORG, INFLUXDB_BUCKET)
+    - change your timezone info and your device name (TZ_INFO, DEVICE)
+    - declare your sensor point name
