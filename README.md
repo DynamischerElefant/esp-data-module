@@ -50,4 +50,5 @@ This three-level system allows for easy optimization where it is needed. Some ex
     - change the wifi-credentials to those of your wifi (WIFI_SSID, WIFI_PASSWORD)
     - setup your Influx connection (INFLUXDB_URL, INFLUXDB_TOKEN, INFLUXDB_ORG, INFLUXDB_BUCKET)
     - change your timezone info and your device name (TZ_INFO, DEVICE)
-    - declare your sensor point name
+    - declare your sensor point name (recommended: use different point names for different data-esps)
+    - change or add sensor tags (helpful for identification of data source)
