@@ -34,8 +34,9 @@ This three-level system allows for easy optimization where it is needed. Some ex
         
 
 ## Server-side
-- lorem ipsum
-
+- run InfluxDB and Grafana
+    - InfluxDB3.x for long term use (newer, better long-term support)
+    - InfluxDB2.x if you are short on memory/ RAM
 
 ## Setup
 ### Sender (sensor-side)
@@ -52,3 +53,7 @@ This three-level system allows for easy optimization where it is needed. Some ex
     - change your timezone info and your device name (TZ_INFO, DEVICE)
     - declare your sensor point name (recommended: use different point names for different data-esps)
     - change or add sensor tags (helpful for identification of data source)
+
+### Server
+- install an InfluxDB version of your choice ([Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/))
+
