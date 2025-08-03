@@ -36,7 +36,7 @@ This three-level system allows for easy optimization where it is needed. Some ex
 ## Server-side
 - run InfluxDB and Grafana
     - InfluxDB3.x for long term use (newer, better long-term support)
-    - InfluxDB2.x if you are short on memory/ RAM
+    - InfluxDB2.x if you are short on memory/ RAM or want a fast out-of-the-box working setup
 
 ## Setup
 ### Sender (sensor-side)
@@ -55,5 +55,6 @@ This three-level system allows for easy optimization where it is needed. Some ex
     - change or add sensor tags (helpful for identification of data source)
 
 ### Server
-- install an InfluxDB version of your choice ([Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/))
-
+- install an InfluxDB version of your choice [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guide for InfluxDB2 (official)](https://de.linux-console.net/?p=29544), [Installation Guido for InfluxDB2 (Ubuntu, unofficial)](https://docs.influxdata.com/influxdb/v2/install/)
+    - -> Database Writes for InfluxDB2 now possible over HTTP (no encryption)
+    - InfluxDB3 doesn't expose the HTTP API per default, so port forwarding/reverse proxy is necessary
