@@ -58,3 +58,4 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - install an InfluxDB version of your choice [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guide for InfluxDB2 (official)](https://de.linux-console.net/?p=29544), [Installation Guido for InfluxDB2 (Ubuntu, unofficial)](https://docs.influxdata.com/influxdb/v2/install/)
     - -> Database Writes for InfluxDB2 now possible over HTTP (no encryption)
     - InfluxDB3 doesn't expose the HTTP API per default, so port forwarding/reverse proxy is necessary
+- install Grafana OSS ([Installation Guide for Ubuntu/Debian](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/))
