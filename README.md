@@ -40,13 +40,13 @@ This three-level system allows for easy optimization where it is needed. Some ex
 
 ## Setup
 ### Sender (sensor-side)
-- in your sensor-esp, insert the code from sender_test.ino somewhere in your sender code
-- sender_test.ino is an example for sending data, after inserting the code, you only have to change a few things
+- in your sensor-esp, insert the code from `sender.ino` somewhere in your sender code
+- `sender.ino` is an example for sending data, after inserting the code, you only have to change a few things
     - set dataLabels to whatever your measurements are called (max 4 letters)
     - make sure to delete the default values and to dynamically set the values using data[i] = measurement for every measurement
 
 ### Receiver (data-esp)
-- setup an esp with the receiver_test_with_db_multiple.ino code
+- setup an esp with the `receiver.ino` code
 - things to change in the code
     - change the wifi-credentials to those of your wifi (WIFI_SSID, WIFI_PASSWORD)
     - setup your Influx connection (INFLUXDB_URL, INFLUXDB_TOKEN, INFLUXDB_ORG, INFLUXDB_BUCKET)
@@ -55,14 +55,14 @@ This three-level system allows for easy optimization where it is needed. Some ex
     - change or add sensor tags (helpful for identification of data source)
 
 ### Server
-- install an InfluxDB version of your choice [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guide for InfluxDB2](https://de.linux-console.net/?p=29544), [Installation Guido for InfluxDB2 (Ubuntu, unofficial)](https://docs.influxdata.com/influxdb/v2/install/), [Installation and Setup for InfluxDB2 (Ubuntu, unofficial)](https://de.linux-console.net/?p=29544)
+- install an InfluxDB version of your choice [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guido for InfluxDB2](https://docs.influxdata.com/influxdb/v2/install/), [Installation and Setup for InfluxDB2 (Ubuntu, unofficial)](https://de.linux-console.net/?p=29544)
     - -> Database Writes for InfluxDB2 now possible over HTTP (no encryption)
     - InfluxDB3 doesn't expose the HTTP API per default, so port forwarding/reverse proxy is necessary
     - additional notes for InfluxDB2
         - a tutorial for Seting up Influx2 is provided inside the Web GUI (standard access: yourserverip:8086)
         - when setting the url inside the arduino script, make sure to also include the port (for self hosting), e.g. `#define INFLUXDB_URL "http://yourserverip:8086"`
 - install Grafana OSS ([Installation Guide for Ubuntu/Debian](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/))
-- setup Grafana ([official Sign-In Guide](https://grafana.com/docs/grafana/latest/setup-grafana/sign-in-to-grafana/)
+- setup Grafana ([official Sign-In Guide](https://grafana.com/docs/grafana/latest/setup-grafana/sign-in-to-grafana/))
 - connect Influx and Grafana [official Grafana-Influx Guide](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/)
     - **Caution:** Make sure you use different API Tokens for each use case, e.g. Grafana or Arduinos. Else you might encounter issues with autorisation
     - create a new Dashboard with the values from your esp
