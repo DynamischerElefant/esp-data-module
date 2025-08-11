@@ -3,3 +3,4 @@
 /receiver_test_with_db
 /receiver_test_with_db_multiple
 /sender_test
+/influx_grafana_test
