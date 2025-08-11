@@ -20,7 +20,7 @@ const uint8_t SENDER_ID = 1;
 uint8_t broadcastAddress[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; //this broadcasts to all receivers
 const int numMeasure = 3;
 const char* dataLabels[numMeasure] = {"temp", "hum", "pres"}; //insert your own measurements names here
-float data[numMeasure] = {22.5, 60.0, 1012.8}; //sends static data (for BUCKET)
+float data[numMeasure] = {22.5, 60.0, 1012.8}; //sends static data (for testing)
 
 void setup() {
   Serial.begin(115200);

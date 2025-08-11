@@ -32,8 +32,8 @@
   
   void setup() {
     Serial.begin(115200);
-    Serial.println("BUCKET Serial connect!!");
-    Serial.println("still BUCKET");
+    Serial.println("testing Serial connect!!");
+    Serial.println("still testing");
     // Setup wifi
     WiFi.mode(WIFI_STA);
     wifiMulti.addAP(WIFI_SSID, WIFI_PASSWORD);
