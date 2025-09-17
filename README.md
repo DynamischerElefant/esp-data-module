@@ -8,7 +8,7 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - server level: self-hosting or cloud computing
 - data collection level: local storage (e.g. SD-Card module) and/or server upload
 - data transmission: general-purpose protocol or custom protocol (polling rate, special datatypes, faster or more secure connection, etc.)
-
+The following Setup section largely optimizes for simple and fast out-of-the-box setup that is easy to use.
 
 ## ESP Communication (1 -> 2)
 - communication via ESPNOW
