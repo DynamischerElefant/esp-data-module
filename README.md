@@ -66,6 +66,6 @@ This three-level system allows for easy optimization where it is needed. Some ex
         - InfluxDB3 does not share the same endpoints as INFLUXDB2, so third-party-libraries like the Arduino Influx library won't work. Instead, manually conduct HTTP requests to the corresponding endpoints.
 - install Grafana OSS ([Installation Guide for Ubuntu/Debian](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/))
 - setup Grafana ([official Sign-In Guide](https://grafana.com/docs/grafana/latest/setup-grafana/sign-in-to-grafana/))
-- connect Influx and Grafana [official Grafana-Influx Guide](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/)
+- connect Influx and Grafana ([official Grafana-Influx Guide](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/))
     - **Caution:** Make sure you use different API Tokens for each use case, e.g. Grafana or Arduinos. Else you might encounter issues with autorisation
     - create a new Dashboard with the values from your esp
