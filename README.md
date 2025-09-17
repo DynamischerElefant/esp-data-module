@@ -4,11 +4,12 @@ A (more or less) universal data collection system and module for ESP-Arduino boa
 
 ## General
 The data collection System consists of 3 layers. The first layer consists of ESP-Boards doing measurements or gathering data. At the second layer, there are data collection ESPs. These recieve data via ESPNOW and can then upload it to a database or store it locally. An InfluxDB-Grafana Combination then makes up the third layer, allowing for centralized data management, storage and visualisation.
+The following Setup section is optimized for minimum setup and use effort.
 This three-level system allows for easy optimization where it is needed. Some examples include:
 - server level: self-hosting or cloud computing
 - data collection level: local storage (e.g. SD-Card module) and/or server upload
 - data transmission: general-purpose protocol or custom protocol (polling rate, special datatypes, faster or more secure connection, etc.)
-The following Setup section largely optimizes for simple and fast out-of-the-box setup that is easy to use.
+
 
 ## ESP Communication (1 -> 2)
 - communication via ESPNOW
