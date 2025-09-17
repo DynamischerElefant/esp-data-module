@@ -70,3 +70,6 @@ This three-level system allows for easy optimization where it is needed. Some ex
 - connect Influx and Grafana ([official Grafana-Influx Guide](https://grafana.com/docs/grafana/latest/getting-started/get-started-grafana-influxdb/))
     - **Caution:** Make sure you use different API Tokens for each use case, e.g. Grafana or Arduinos. Else you might encounter issues with autorisation
     - create a new Dashboard with the values from your esp
+
+## References
+Code in `influx_test.ino` and `receiver.ino` partly taken from the demo code at InfluxDB
