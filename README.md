@@ -56,7 +56,7 @@ This three-level system allows for easy optimization where it is needed. Some ex
     - change or add sensor tags (helpful for identification of data source)
 
 ### Server
-- install an InfluxDB version of your choice [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guido for InfluxDB2](https://docs.influxdata.com/influxdb/v2/install/), [Installation and Setup for InfluxDB2 (Ubuntu, unofficial)](https://de.linux-console.net/?p=29544) **WARNING:** currently, InfluxDB3 is difficult to set up for this usecase. For the easiest setup possible, use InfluxDB2.
+- install an InfluxDB version of your choice or use [InfluxDB Cloud](https://www.influxdata.com/products/influxdb-cloud/)(limited free tier available), [Installation Guide for InfluxDB3](https://docs.influxdata.com/influxdb3/core/install/), [Installation Guido for InfluxDB2](https://docs.influxdata.com/influxdb/v2/install/), [Installation and Setup for InfluxDB2 (Ubuntu, unofficial)](https://de.linux-console.net/?p=29544) **WARNING:** currently, InfluxDB3 is difficult to set up for this usecase. For the easiest setup possible, use InfluxDB2.
     - -> Database Writes for InfluxDB2 now possible over HTTP (no encryption)
     - additional notes for InfluxDB2
         - a tutorial for Seting up Influx2 is provided inside the Web GUI (standard access: yourserverip:8086)
